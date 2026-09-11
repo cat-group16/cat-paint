@@ -1,0 +1,10 @@
+<resources>
+    <style name="Widget.CatPaint.AppWidget.Container" parent="android:Widget">
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="Widget.CatPaint.AppWidget.InnerView" parent="android:Widget">
+        <item name="android:background">@android:color/darker_gray</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>

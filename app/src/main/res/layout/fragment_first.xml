@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCE4EC"
+    tools:context=".FirstFragment">
+
+    <!-- Toolbar Superiore -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/top_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cat Paint"
+                android:textColor="#F06292"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btn_settings"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Impostazioni"
+                android:src="@drawable/ic_settings_custom"
+                app:tint="#F06292" />
+
+            <ImageButton
+                android:id="@+id/btn_clear"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Pulisci"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                app:tint="@android:color/darker_gray" />
+
+            <ImageButton
+                android:id="@+id/btn_add_text"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Aggiungi Testo"
+                android:src="@android:drawable/ic_menu_edit"
+                app:tint="@android:color/darker_gray" />
+
+            <ImageButton
+                android:id="@+id/btn_save"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Salva"
+                android:src="@android:drawable/ic_menu_save"
+                app:tint="#F06292" />
+
+        </LinearLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <!-- Area di disegno -->
+    <com.example.catpaint.DrawingView
+        android:id="@+id/drawing_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_toolbar" />
+
+    <!-- Decorazioni Gatto (visibili solo se abilitate da opzioni sviluppatore) -->
+    <ImageView
+        android:id="@+id/cat_decoration_1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0.8"
+        android:elevation="6dp"
+        android:src="@drawable/ic_cat_decoration"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_toolbar"
+        android:contentDescription="Cat decoration"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/cat_decoration_2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0.8"
+        android:rotation="20"
+        android:elevation="6dp"
+        android:src="@drawable/ic_cat_decoration"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_toolbar"
+        android:contentDescription="Cat decoration"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/cat_decoration_3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="16dp"
+        android:alpha="0.7"
+        android:rotation="-15"
+        android:elevation="6dp"
+        android:src="@drawable/ic_cat_decoration"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="Cat decoration"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/cat_decoration_4"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_margin="16dp"
+        android:alpha="0.7"
+        android:rotation="10"
+        android:elevation="6dp"
+        android:src="@drawable/ic_cat_decoration"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="Cat decoration"
+        tools:visibility="visible" />
+
+    <!-- Barra degli strumenti in basso (Ripristinata orizzontale come prima) -->
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/color_black"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    android:background="@android:color/black"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <View
+                    android:id="@+id/color_red"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    android:background="#FF5252"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <View
+                    android:id="@+id/color_blue"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    android:background="#448AFF"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <View
+                    android:id="@+id/color_green"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    android:background="#69F0AE"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <View
+                    android:id="@+id/color_yellow"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    android:background="#FFFF00"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <View
+                    android:id="@+id/color_pink"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    android:background="#FF4081"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <!-- Gomma -->
+                <ImageButton
+                    android:id="@+id/btn_eraser"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    android:background="@android:color/white"
+                    android:scaleType="centerInside"
+                    android:src="@android:drawable/ic_menu_delete"
+                    app:tint="@android:color/darker_gray"
+                    android:contentDescription="Gomma" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Pulsanti d'azione (Svuotato perché spostati sopra) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_add_image"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="@string/btn_add_image"
+                app:icon="@android:drawable/ic_menu_gallery" />
+
+            <Button
+                android:id="@+id/btn_load_pdf"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="@string/btn_load_pdf"
+                app:icon="@android:drawable/ic_menu_agenda" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
