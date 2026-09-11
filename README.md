@@ -21,3 +21,7 @@ Un'app per disegnare divertente e colorata a tema gatto, ottimizzata per Android
 *   **Min SDK**: 29 (Android 10)
 *   **Target SDK**: 34 (Android 14)
 *   **Linguaggio**: Java / XML
+
+* ## dawload
+* https://github.com/cat-group16/cat-paint/releases/tag/1.0.4
+
