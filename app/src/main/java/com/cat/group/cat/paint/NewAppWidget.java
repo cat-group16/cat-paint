@@ -1,4 +1,4 @@
-package com.example.catpaint;
+package com.cat.group.cat.paint;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -21,8 +21,8 @@ import java.io.OutputStream;
 
 public class NewAppWidget extends AppWidgetProvider {
 
-    public static final String ACTION_CLEAR = "com.example.catpaint.ACTION_CLEAR";
-    public static final String ACTION_SAVE = "com.example.catpaint.ACTION_SAVE";
+    public static final String ACTION_CLEAR = "com.cat.group.cat.paint.ACTION_CLEAR";
+    public static final String ACTION_SAVE = "com.cat.group.cat.paint.ACTION_SAVE";
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager, int appWidgetId) {
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.new_app_widget);
@@ -72,7 +72,7 @@ public class NewAppWidget extends AppWidgetProvider {
             if (cacheFile.exists()) cacheFile.delete();
             
             // Trigger app update if running (optional, but good for sync)
-            Intent refreshIntent = new Intent("com.example.catpaint.REFRESH");
+            Intent refreshIntent = new Intent("com.cat.group.cat.paint.REFRESH");
             context.sendBroadcast(refreshIntent);
 
             updateAllWidgets(context);

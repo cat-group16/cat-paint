@@ -1,4 +1,4 @@
-package com.example.catpaint;
+package com.cat.group.cat.paint;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -10,7 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
-import com.example.catpaint.databinding.FragmentSettingsBinding;
+import com.cat.group.cat.paint.databinding.FragmentSettingsBinding;
 
 public class SettingsFragment extends Fragment {
 

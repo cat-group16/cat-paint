@@ -1,4 +1,4 @@
-package com.example.catpaint;
+package com.cat.group.cat.paint;
 
 import android.appwidget.AppWidgetManager;
 import android.content.BroadcastReceiver;
@@ -33,7 +33,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
-import com.example.catpaint.databinding.FragmentFirstBinding;
+import com.cat.group.cat.paint.databinding.FragmentFirstBinding;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -142,7 +142,7 @@ public class FirstFragment extends Fragment {
 
         // Listen for remote clear commands from widget
         if (getContext() != null) {
-            IntentFilter filter = new IntentFilter("com.example.catpaint.REFRESH");
+            IntentFilter filter = new IntentFilter("com.cat.group.cat.paint.REFRESH");
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                 getContext().registerReceiver(refreshReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
             } else {

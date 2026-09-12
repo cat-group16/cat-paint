@@ -1,4 +1,4 @@
-package com.example.catpaint;
+package com.cat.group.cat.paint;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
-import com.example.catpaint.databinding.FragmentMenuBinding;
+import com.cat.group.cat.paint.databinding.FragmentMenuBinding;
 
 public class MenuFragment extends Fragment {
 

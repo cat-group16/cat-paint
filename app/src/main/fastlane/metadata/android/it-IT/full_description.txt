@@ -1,0 +1,12 @@
+Cat Paint è l'app definitiva per gli amanti dei gatti e del disegno.
+Crea opere d'arte da zero o importa le tue foto e documenti PDF per personalizzarli con gatti adorabili, testi colorati e tratti artistici.
+
+Caratteristiche principali:
+- Strumenti di disegno fluidi con vari colori.
+- Inserimento di testo personalizzato.
+- Supporto per immagini e PDF.
+- Esportazione in PNG, JPG e PDF.
+- Widget Home Screen con anteprima del disegno.
+- Decorazioni gattose interattive.
+
+Perfetta per chi vuole aggiungere un tocco di creatività (e gatti!) alla propria giornata. 🐱✨

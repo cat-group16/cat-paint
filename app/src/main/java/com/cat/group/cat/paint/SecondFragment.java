@@ -1,4 +1,4 @@
-package com.example.catpaint;
+package com.cat.group.cat.paint;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.catpaint.databinding.FragmentSecondBinding;
+import com.cat.group.cat.paint.databinding.FragmentSecondBinding;
 
 public class SecondFragment extends Fragment {
 

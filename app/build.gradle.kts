@@ -3,15 +3,15 @@ plugins {
 }
 
 android {
-    namespace = "com.example.catpaint"
-    compileSdk = 34
+    namespace = "com.cat.group.cat.paint"
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.catpaint"
+        applicationId = "com.cat.group.cat.paint"
         minSdk = 29
-        targetSdk = 34
-        versionCode = 2
-        versionName = "1.0.4"
+        targetSdk = 36
+        versionCode = 3
+        versionName = "1.0.5"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

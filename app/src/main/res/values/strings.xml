@@ -51,8 +51,8 @@
     <string name="app_widget_description">This is an app widget description</string>
     <string name="update_notes_title">Novità Aggiornamento</string>
     <string name="update_notes_content">• Risolto crash Android 12 (SDK 34).\n• Aggiunto Menu Principale.\n• Nuova Toolbar superiore.\n• Caricamento PDF e salvataggio JPG/PDF.\n• Inserimento testo nel disegno.</string>
-    <string name="app_version">1.0.4</string>
-    <string name="app_version_display">Versione 1.0.4</string>
+    <string name="app_version">1.0.5</string>
+    <string name="app_version_display">Versione 1.0.5</string>
     <string name="btn_text">Testo</string>
     <string name="dialog_add_text_title">Aggiungi Testo 🐾</string>
     <string name="dialog_add_text_hint">Scrivi qui...</string>

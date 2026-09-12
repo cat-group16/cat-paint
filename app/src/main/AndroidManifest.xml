@@ -33,8 +33,8 @@
             android:permission="android.permission.BIND_APPWIDGET">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.example.catpaint.ACTION_CLEAR" />
-                <action android:name="com.example.catpaint.ACTION_SAVE" />
+                <action android:name="com.cat.group.cat.paint.ACTION_CLEAR" />
+                <action android:name="com.cat.group.cat.paint.ACTION_SAVE" />
             </intent-filter>
 
             <meta-data
